@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Therapy</title>
+    <link rel="stylesheet" href="main.css">
+    
+    <!-- Favicon for the website tab -->
+    <link rel="icon" type="image/png" href="vr_arlogo.jpg">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="vr_arlogo.jpg" alt="Autspark Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="#about-section">ABOUT</a></li>
+            <li><a href="#">GAMES</a></li>
+            <!-- Dropdown for Course Work -->
+            <li class="dropdown" id="courseWork">
+                COURSE WORK
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li><a href="course.html">Material</a></li>
+                    <li><a href="course.html">Learning</a></li>
+                    <li><a href="course.html">Personalize</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="login-button">Login / Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Practice in VR. Grow in Real Life.</h1>
+            <p>A virtual therapy modality with real-world results.</p>
+            <button class="learn-more-button" onclick="scrollToAbout()">Learn More</button>
+        </div>
+        <div class="hero-images">
+            <div class="image-container"> 
+                <img src="vr_ar1jpg.jpg" alt="VR therapy 1">
+            </div>
+            <div class="image-container"> 
+                <img src="vr_ar2jpg.jpg" alt="VR therapy 2">
+            </div>
+            <div class="image-container"> 
+                <img src="vr_ar3jpg.jpg" alt="VR therapy 3">
+            </div>
+            <div class="image-container"> 
+                <img src="vr_ar4jpg.jpg" alt="VR therapy 4">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about-section" class="about-us">
+        <h2>About Us</h2>
+        <p>
+            At Autspark, we believe in empowering individuals with Autism Spectrum Disorder (ASD) 
+            by providing an innovative and supportive digital environment.
+        </p>
+        <h3>Our Key Features</h3>
+        <ul>
+            <li><strong>Buddy Chatbot System</strong></li>
+            <li><strong>Voice-Controlled Assistance</strong></li>
+            <li><strong>Delivery as a Service</strong></li>
+            <li><strong>Gamified Social Platform</strong></li>
+            <li><strong>Personalized Learning Experience</strong></li>
+        </ul>
+    </section>
+<hr>
+<br>
+    <!-- Contact Information Section -->
+    <section id="contact-section" class="contact-us">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        // Scroll to the About Us section smoothly when "Learn More" is clicked
+        function scrollToAbout() {
+            document.getElementById('about-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Dropdown toggle functionality
+        const courseWork = document.getElementById('courseWork');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        courseWork.addEventListener('mouseenter', () => {
+            dropdownMenu.style.display = 'block';
+        });
+
+        courseWork.addEventListener('mouseleave', () => {
+            dropdownMenu.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

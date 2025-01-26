@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Therapy</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/jpeg" href="vr_arlogo.jpg">
+</head>
+<body>
+    <div class="App">
+        <!-- Back Button -->
+        <button class="back-button" onclick="goBack()">← Back</button>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="vr_arlogo.jpg" alt="Autspark Logo">
+            </div>
+            <ul class="nav-links">
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>SHOP</li>
+                <li>GAMES</li>
+                <!-- Dropdown for Course Work -->
+                <li class="dropdown" onmouseenter="toggleDropdown(true)" onmouseleave="toggleDropdown(false)">
+                    COURSE WORK
+                    <ul class="dropdown-menu" id="dropdown-menu">
+                        <li>Material</li>
+                        <li>Learning</li>
+                        <li>Personalize</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="login-button">Login / Sign Up</button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero" id="home">
+            <div class="hero-text">
+                <br>
+                <h1>Practice in VR. Grow in Real Life.</h1>
+                <p>A virtual therapy modality with real-world results.</p>
+                <p>A resource to help Autistic people.</p>
+                <h4>What is ASD?</h4>
+                <p>
+                    Autism Spectrum Disorder (ASD) is a complex neurodevelopmental condition that affects an individual's 
+                    social interactions, communication abilities, and behavior. It is referred to as a "spectrum" because 
+                    it manifests differently in each person, ranging from mild to severe symptoms. People with autism may 
+                    experience challenges in understanding social cues, engaging in conversations, and forming relationships. 
+                    Additionally, they may display repetitive behaviors, have intense interests in specific topics, and face 
+                    difficulties in adapting to changes in their environment or routines. The exact cause of autism is not 
+                    fully understood, but it is believed to result from a combination of genetic and environmental factors. 
+                    Early diagnosis and intervention play a crucial role in helping individuals with autism develop essential 
+                    life skills and improve their quality of life.
+                </p>
+            </div>
+            <div class="hero-images">
+                <div class="image-container"> 
+                    <img src="aut.jpeg" alt="VR therapy 1">
+                </div>
+                <div class="image-container"> 
+                    <img src="vr_ar2jpg.jpg" alt="VR therapy 2">
+                </div>
+                <div class="image-container"> 
+                    <img src="vr_ar3jpg.jpg" alt="VR therapy 3">
+                </div>
+                <div class="image-container"> 
+                    <img src="aut2.jpeg" alt="VR therapy 4">
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <script>
+        function toggleDropdown(isOpen) {
+            const dropdownMenu = document.getElementById("dropdown-menu");
+            dropdownMenu.style.display = isOpen ? "block" : "none";
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        // Ensure the page scrolls to the hero section on load
+        window.onload = function() {
+            document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>

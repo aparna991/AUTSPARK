@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Therapy Tests</title>
+    <link rel="stylesheet" href="course.css">
+    
+    <!-- Favicon for the website tab -->
+    <link rel="icon" type="image/png" href="vr_arlogo.jpg">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="vr_arlogo.jpg" alt="Autspark Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="#about-section">ABOUT</a></li>
+            <li><a href="#">GAMES</a></li>
+            <!-- Dropdown for Course Work -->
+            <li class="dropdown" id="courseWork">
+                COURSE WORK
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li><a href="#">Material</a></li>
+                    <li><a href="#">Learning</a></li>
+                    <li><a href="#">Personalize</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="login-button">Login / Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Explore Our Tests</h1>
+            <p>Choose from a variety of assessments to understand your needs better.</p>
+            <button class="learn-more-button" onclick="scrollToAbout()">Learn More</button>
+        </div>
+        <div class="hero-images">
+            <div class="image-container"> 
+                <img src="vr_ar1jpg.jpg" alt="VR therapy 1">
+            </div>
+            <div class="image-container"> 
+                <img src="vr_ar2jpg.jpg" alt="VR therapy 2">
+            </div>
+            <div class="image-container"> 
+                <img src="vr_ar3jpg.jpg" alt="VR therapy 3">
+            </div>
+            <div class="image-container"> 
+                <img src="vr_ar4jpg.jpg" alt="VR therapy 4">
+            </div>
+        </div>
+    </header>
+
+    <!-- Tests Section -->
+    <section id="tests-section" class="tests">
+        <h2>Available Tests</h2>
+        <ul>
+            <li><a href="3di_test.html">3DI Test</a></li>
+            <li><a href="other_test.html">Other Test</a></li>
+            <li><a href="another_test.html">Another Test</a></li>
+        </ul>
+    </section>
+
+    <!-- Back Button Section -->
+    <section class="back-button-section">
+        <button class="back-button" onclick="goBack()">Back</button>
+    </section>
+
+    <script>
+        // Scroll to the About Us section smoothly when "Learn More" is clicked
+        function scrollToAbout() {
+            document.getElementById('about-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Function to go back to a specific page (e.g., home.html)
+        function goBack() {
+            window.location.href = 'home.html'; // Change this to the desired URL
+        }
+
+        // Dropdown toggle functionality
+        const courseWork = document.getElementById('courseWork');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        courseWork.addEventListener('mouseenter', () => {
+            dropdownMenu.style.display = 'block';
+        });
+
+        courseWork.addEventListener('mouseleave', () => {
+            dropdownMenu.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
