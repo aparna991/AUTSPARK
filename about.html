@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VR Therapy</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="icon" type="image/png" href="vr_arlogo.jpg">
 </head>
 <body>
@@ -17,7 +17,6 @@
             <li><a href="home.html">HOME</a></li>
             <li><a href="#">SHOP</a></li>
             <li><a href="#">BLOG</a></li>
-            <!-- Dropdown for Course Work -->
             <li class="dropdown">
                 <a href="#">COURSE WORK</a>
                 <ul class="dropdown-menu">
@@ -44,77 +43,41 @@
     <!-- About Us Section -->
     <section class="about-us" id="about-us">
         <h2>About Us</h2>
-        <p>At Autspark, we believe in empowering individuals with Autism Spectrum Disorder (ASD) by providing an innovative and supportive digital environment. Our platform offers a range of features designed to enhance learning, communication, and social interaction in an engaging way.</p>
-        <h3>Our Key Features</h3>
-        <ul>
-            <li><strong>Buddy Chatbot System</strong>
-                <ul>
-                    <li>A friendly chatbot that serves as a virtual companion for children.</li>
-                    <li>Supports text and voice-based communication, making it easier for children to express themselves.</li>
-                    <li>Provides personalized responses to support emotional well-being and development.</li>
-                    <li>Helps children practice communication skills in a safe, judgment-free space.</li>
-                </ul>
-            </li>
-            <li><strong>Voice-Controlled Assistance</strong>
-                <ul>
-                    <li>Hands-free interaction with the app through voice commands.</li>
-                    <li>Enhances accessibility for children who find text-based communication challenging.</li>
-                    <li>Helps in navigating educational content, reminders, and daily activities effortlessly.</li>
-                </ul>
-            </li>
-            <li><strong>Delivery as a Service</strong>
-                <ul>
-                    <li>Hassle-free ordering and delivery of creative stationery, learning materials, and personalized therapy aids.</li>
-                    <li>Seamless tracking and doorstep delivery for parents and caregivers.</li>
-                    <li>Customizable product options tailored to individual needs.</li>
-                </ul>
-            </li>
-            <li><strong>Gamified Social Platform</strong>
-                <ul>
-                    <li>A fun and interactive gaming platform where children can engage in educational games.</li>
-                    <li>Encourages social interaction with like-minded peers, fostering friendships through shared interests.</li>
-                    <li>Reward-based system that motivates engagement and enhances learning outcomes.</li>
-                    <li>Safe and monitored environment to ensure a positive and inclusive experience.</li>
-                </ul>
-            </li>
-            <li><strong>Personalized Learning Experience</strong>
-                <ul>
-                    <li>Curated content and activities tailored to each child's specific learning style and developmental stage.</li>
-                    <li>Progress tracking to provide insights into improvement areas and achievements.</li>
-                    <li>Expert-designed modules focusing on social skills, communication, and emotional regulation.</li>
-                </ul>
-            </li>
-        </ul>
+        <div class="scrollable-content">
+            <ul>
+                <li><strong>Buddy Chatbot System</strong>
+                    <ul>
+                        <li>A friendly chatbot that serves as a virtual companion for children.</li>
+                        <li>Supports text and voice-based communication.</li>
+                        <li>Provides personalized responses to support emotional well-being.</li>
+                    </ul>
+                </li>
+                <li><strong>Voice-Controlled Assistance</strong>
+                    <ul>
+                        <li>Hands-free interaction with the app through voice commands.</li>
+                        <li>Enhances accessibility for children.</li>
+                    </ul>
+                </li>
+                <li><strong>Delivery as a Service</strong>
+                    <ul>
+                        <li>Hassle-free ordering and delivery of therapy aids.</li>
+                        <li>Seamless tracking for parents and caregivers.</li>
+                    </ul>
+                </li>
+                <li><strong>Gamified Social Platform</strong>
+                    <ul>
+                        <li>Fun educational games that encourage social interaction.</li>
+                        <li>Safe and monitored environment.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </section>
-
-    <!-- Hero Images Section -->
-    <div class="hero-images">
-        <div class="image-container"> 
-            <img src="vr_ar1jpg.jpg" alt="VR therapy 1">
-        </div>
-        <div class="image-container"> 
-            <img src="vr_ar2jpg.jpg" alt="VR therapy 2">
-        </div>
-        <div class="image-container"> 
-            <img src="vr_ar3jpg.jpg" alt="VR therapy 3">
-        </div>
-        <div class="image-container"> 
-            <img src="vr_ar4jpg.jpg" alt="VR therapy 4">
-        </div>
-    </div>
 
     <script>
         function scrollToAbout() {
             document.getElementById('about-us').scrollIntoView({ behavior: 'smooth' });
         }
-
-        const dropdown = document.querySelector('.dropdown');
-        dropdown.addEventListener('mouseenter', () => {
-            dropdown.classList.add('open');
-        });
-        dropdown.addEventListener('mouseleave', () => {
-            dropdown.classList.remove('open');
-        });
     </script>
 </body>
 </html>
